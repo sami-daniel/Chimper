@@ -1,0 +1,52 @@
+var typedTextSpan = document.querySelector(".typed-text");
+var cursorSpan = document.querySelector(".cursor");
+
+const textArray = ["Web Apps", "WordPress", "Mobile Apps"];
+const typingDelay = 200;
+const erasingDelay = 100;
+const newTextDelay = 2000;
+let textArrayIndex = 0;
+let charIndex = 0;
+
+function type() {
+  typedTextSpan = document.querySelector(".typed-text");
+  cursorSpan = document.querySelector(".cursor");
+  if (charIndex < textArray[textArrayIndex].length) {
+    if (!cursorSpan.classList.contains('typing')) {
+      cursorSpan.classList.add("typing");
+    }
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  }
+  else {
+    cursorSpan.classList.remove("typing");
+    setTimeout(erase, newTextDelay);
+  }
+}
+
+function erase() {
+  if (charIndex > 0) {
+    if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  }
+  else {
+    cursorSpan.classList.remove("typing");
+    textArrayIndex++;
+    if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+    setTimeout(type, typingDelay + 1100);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () { // On DOM Load initiate the effect
+  if (textArray.length) setTimeout(type, newTextDelay + 250);
+
+  var elements = document.querySelectorAll('*');
+
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].classList.add('slide-up-element');
+  }
+  
+});
