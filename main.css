@@ -1292,7 +1292,6 @@ body {
 }
 
 .format-div-list-from-blog-enumerator {
-    width: 100%;
     margin: 0 auto;
     grid-column: span 2;
     display: inline !important;
@@ -1364,4 +1363,125 @@ body {
 .spacing {
     font-size: 5px;
     color: white;
+}
+
+.site-section-forms {
+    display: flex;
+    padding: 6em 0;
+    justify-content: center;
+    background-color: #f8f9fa;
+}
+
+.container-from-section-contact-forms {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+}
+
+.div-contact-form {
+    width:41%;
+    background-color: white;
+    padding: 1.5rem;
+}
+
+.padding-1-5rem {
+    width: 100%;
+}
+
+.flex-display-row-contact {
+    display: flex;
+}
+
+.aside-row-contact {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+}
+
+.input-text-contact {
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 43px;
+    border-radius: 30px;
+    border: #6c757d 1px solid !important;
+    outline: none;
+}
+
+.flex-display-row-contact {
+    width: 100%;
+}
+
+.mb4 {
+    margin-bottom: 3vh !important;
+}
+
+.title-lbl {
+    padding-bottom: .86vh;
+}
+
+.formgroup {
+    margin-bottom: 2.5vh;
+}
+
+#text-area-from-contact-form {
+    resize: vertical;
+    border-radius: 30px;
+    padding: 1.5rem;
+    outline: none;
+    transition: none !important;
+}
+
+.input-text-contact:focus {
+    border: #0d0cb5 1px solid !important;
+    transition: 0.5s;
+}
+
+.input-text-contact:not(:focus) {
+    transition: 0.5s;
+}
+
+#text-area-from-contact-form {
+    font-size: 16px;
+}
+
+#text-area-from-contact-form:focus {
+    border: #0d0cb5 1px solid !important;
+    transition: 0.5s;
+}
+
+#text-area-from-contact-form:not(:focus) {
+    transition: 0.5s;
+}
+
+.h2-contact-form-title-div-24 {
+    font-size: 24px;
+    margin-bottom: 3rem;
+    padding-left: 15px;
+    font-weight: 500;
+}
+
+#button-incircle {
+    height: 50px;
+    border-radius: 30px;
+    width: 35%;
+    background-color: #0d0cb5;
+    color: white;
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+
+.excColor {
+    background-color: #f8f9fa;
+    padding: 0;
+}
+
+.excColorNone {
+    background-color: white;
+    padding: 1.5rem;
+}
+.noWidth{
+    width: 50%;
 }
